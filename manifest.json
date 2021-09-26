@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "DomainBloq",
+    "version": "0.1",
+    "description": "Time-based domain blocking for productivity",
+
+    "icons": {},
+
+    "background":
+    [
+        "test.js",
+        "blacklist.js"
+    ],
+    "declarative_net_request": {
+        "rule_resources":
+        [{
+            "id": "ruleset_",
+            "enabled": true,
+            "path": "rules.json"
+        }]
+    },
+    "permissions":
+    [
+        "background",
+        "declarativeNetRequest",
+        "declarativeNetRequestFeedback",
+        "http://*/",
+        "https://*/",
+        "storage",
+        "tabs"
+    ]
+}
